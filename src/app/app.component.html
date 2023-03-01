@@ -1,0 +1,38 @@
+<div class="container">
+  
+  <div class="date">
+    <i class="fa-solid fa-calendar-days"></i>
+    <span>{{getDate()}}</span>
+
+    <i id="refresh" class="fa-sharp fa-solid fa-arrows-rotate " (click)="refresh()" ></i>
+  </div>
+
+  <div class="header">
+    <h4>Daily Routine </h4>
+    <h1>Todo List</h1>
+  </div>
+
+  <div class="inputBox">
+    <input type="text" placeholder="Enter Item Name..." [(ngModel)]="addInput">
+    <button (click)="addItem()" *ngIf="showAdd==true">save</button>
+    <div class="updateGroup" *ngIf="showUpdate==true">
+      <button (click)="updateItem()">Update</button>
+      <button (click)="cancel()">Cancel</button>
+    </div>
+  </div>
+
+  <div class="content" *ngFor="let item of data.list">
+    <div class="contentPart">
+        <input type="checkbox" (change)="checked(item)">
+        <p class="name1" *ngIf="item.check==false">{{item.name}}</p>
+        <p class="name2" *ngIf="item.check==true">{{item.name}}</p>
+    </div>
+    <div class="buttonGroup">      
+      <i class="fa-solid fa-pen-to-square" (click)="editInput(item)" *ngIf="item.check==false"></i>
+      <i class="fa-solid fa-pen-to-square" *ngIf="item.check==true" id="disable"></i>
+      <i class="fa-sharp fa-solid fa-trash" (click)="deleteInput(item)"></i>
+    </div>
+  </div>
+</div>
+
+

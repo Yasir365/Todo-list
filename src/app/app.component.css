@@ -1,0 +1,183 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: silver;
+    border-radius: 30px;
+    box-shadow: 2px 2px 8px 8px brown;
+    padding: 30px;
+    margin: 30px auto;
+}
+
+
+.date{
+    font-size: 20px;
+    display: inline;
+    margin: 10px 0 ;
+    position: relative;
+}
+
+.container #refresh{
+    position: absolute;
+    right: 10px;
+    font-size: 25px;
+}
+
+.container #refresh:hover{
+    font-size: 27px;
+    color: rgb(226, 139, 25);
+}
+
+.date i{
+    margin-right: 5px;
+    color: brown;
+}
+
+.date span{
+    color: brown;
+    text-decoration: underline;
+    font-family: cursive;
+}
+
+.header h4{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Times New Roman', Times, serif;
+    color: brown;
+    margin: 15px 0;
+}
+
+.header h1{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: cursive;
+    color: brown;
+    margin: 15px 0;
+}
+
+.inputBox{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.inputBox input{
+    width: 80%;
+    padding:  7px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.inputBox button{
+    width: 10%;
+    padding: 0 10px;
+    font-size: 15px;
+    border: none;
+    background-color: brown;
+    color: white;
+    border-radius: 0 5px 5px 0;
+
+}
+
+.inputBox button:hover{
+    background-color: rgb(226, 139, 25);
+    font-size: 18px;
+}
+
+.updateGroup{
+    display: flex;
+}
+
+.updateGroup button{
+    width: 50%;
+    margin-right:10px;
+}
+
+.updateGroup button:nth-child(2){
+    border-radius: 5px;
+    background-color: black;
+}
+
+.content{
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 5px;
+    width: 100%;
+    height: 33px;
+    border-radius: 10px;
+}
+
+.content .contentPart{
+    align-self: flex-start;
+    display: flex;
+}
+
+.contentPart .name1{
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.contentPart .name2{
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: line-through;
+}
+
+.contentPart input{
+    color: brown;
+    width: 20px;
+
+}
+
+.buttonGroup{
+    display: flex;
+}
+
+.buttonGroup i{
+    text-align: center;
+    padding:5px 10px;
+    border-radius: 10px;
+    margin: 0 5px;
+    font-size: 20px;
+    border: none;
+    background-color: brown;
+    color: white;
+}
+
+.buttonGroup i:nth-child(2){
+    background-color: black;
+}
+
+.buttonGroup i:hover{
+    background-color: rgb(226, 139, 25);
+    padding: 5px 10px;
+    font-size: 25px;
+}
+
+.buttonGroup #disable{
+    background-color: silver;
+    font-size: 15px;
+}
+
+
+
+@media screen and (max-width:768px) {
+    .container{
+        width: 80%;
+    }
+    
+}
+
+@media screen and (max-width:425px) {
+    .container{
+        width: 90%;
+    }
+
+    .inputBox button{
+        width: 20%;
+        
+    }
+}
